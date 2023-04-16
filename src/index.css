@@ -24,6 +24,7 @@ body {
 
 .container form {
   width: 400px;
+  max-width: 90vw;
   background-color: #fff;
   border-radius: 0.45rem;
   padding: 1rem;
@@ -113,6 +114,7 @@ body {
 
 /* Result.js */
 .result {
+  max-width: 90vw;
   background-color: #fff;
   padding: 1rem;
   border-radius: 0.4rem;
@@ -139,6 +141,7 @@ body {
   left: 50%;
 
   width: 400px;
+  max-width: 95vw;
   transform: translate(-50%, -50%);
   background-color: #fff;
   z-index: 2;
@@ -212,4 +215,8 @@ body {
   font-weight: 600;
   border-bottom: 1px solid #000;
   cursor: pointer;
+}
+
+@media screen  and (max-width: 500px) {
+  
 }

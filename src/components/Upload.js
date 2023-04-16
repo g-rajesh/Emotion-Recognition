@@ -50,7 +50,11 @@ const Upload = ({setPrediction}) => {
   const submitHandler = async (e) => {
     e.preventDefault();
 
-    if(data.length === 0) return;
+    setError("");
+    if(data.length === 0) {
+      setError("Please choose a file");
+      return;
+    }
     setLoading(true);
 
     const url = "http://127.0.0.1:9090/user/predict";
