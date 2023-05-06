@@ -26,7 +26,7 @@ const MyDocument = ({user}) => (
             
             <View style={{display: "flex", flexDirection: "row", marginBottom: "15pt"}}>
                 <Text style={{width: "40%"}}>Full Name:</Text>
-                <Text style={{width: "60%"}}>{user.title}. {user.fullName}</Text>
+                <Text style={{width: "60%"}}>{user.fullName}</Text>
             </View>
 
             <View style={{display: "flex", flexDirection: "row", marginBottom: "15pt"}}>

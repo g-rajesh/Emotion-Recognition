@@ -5,17 +5,43 @@ from flask_cors import CORS
 import pandas as pd
 import numpy as np
 
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+
 app = Flask("Emotion_Recognition")
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
-loaded_model = tf.keras.models.load_model('model.h5')
+loaded_model = tf.keras.models.load_model('../model.h5')
 
 @app.route("/greet", methods=["GET"])
 def greeting():
     print("Called")
     return jsonify({ "message": "Hello there, - from Team" })
 
+@app.route("/sendMail", methods=["GET"])
+def sendMail():
+    sender_email = 'nolanoftenet3601@gmail.com'
+    receiver_email = 'nolanoftenet3601@gmail.com'
+    password = 'NolanOfTenet3601'
 
+    message = MIMEMultipart()
+    message['From'] = sender_email
+    message['To'] = receiver_email
+    message['Subject'] = 'Test Email'
+
+    body = 'Hello from Python!'
+    message.attach(MIMEText(body, 'plain'))
+
+    smtp_server = 'smtp.gmail.com'
+    smtp_port = 587
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+        server.starttls()
+        server.login(sender_email, password)
+        text = message.as_string()
+        server.sendmail(sender_email, receiver_email, text)
+        print('Email sent!')
+        return jsonify({ "message": "Hello there, - from Team" })
 
 
 @app.route("/user/predict", methods=["POST"])

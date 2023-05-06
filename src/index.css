@@ -1,6 +1,579 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@300;400;500;700&display=swap');
 
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Navbar */
+header {
+    width: 100%;
+    height: fit-content;
+    /* background-color: #f2f2f2; */
+    padding: 0 3rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-toggler {
+    display: none;
+}
+
+.header-title {
+    font-size: 1.5rem;
+}
+
+.header-title .title-span {
+    font-size: 2rem;
+    color: #2ec4b6;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 1rem;
+}
+
+header nav ul li a {
+    color: #000;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+header nav ul li a.active {
+    color: #2ec4b6;
+}
+
+header .t-icon {
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+/* Landing */
+.landing-container {
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.landing-container .content {
+    max-width: 968px;
+    margin: 0 auto;
+}
+
+.landing-container .content > .header,
+.landing-container .content > .about  {
+    margin-bottom: 2rem;
+}
+
+.landing-container .content > .header > h2,
+.landing-container .content > .about > h2,
+.landing-container .content > .usage > h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+.landing-container .content > .header > p {
+    font-size: 1rem;
+}
+
+.landing-container .content > .about .flex {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 5rem;
+
+}
+
+.landing-container .content > .about .flex .card {
+    width: 300px;
+    background-color: rgba(23, 195, 178, 0.4);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.landing-container .content > .about .flex .card .header {
+    background-color: #fff;
+    width: fit-content;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.landing-container .content > .about .flex .card .header img {
+    width: 25px;
+    height: fit-content;
+    object-fit: contain;
+}
+
+.landing-container .content > .about .flex .card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+}
+
+.landing-container .content > .about .flex .card p {
+    font-size: 0.9rem;
+}
+
+.landing-container .content .usage .question {
+    padding: 1rem 0;
+    border-top: 1px solid #000;
+}
+
+.landing-container .content .usage .question:last-child {
+    border-bottom: 1px solid #000;
+}
+
+.landing-container .content .usage .question .top {
+    display: flex;
+    align-items: center;
+}
+
+.landing-container .content .usage .question .top p {
+    width: 95%;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.landing-container .content .usage .question .top .c-icon {
+    justify-self: flex-end;
+    cursor: pointer;
+}
+
+.landing-container .content .usage .question > p {
+    margin-top: 0.7rem;
+    font-size: 0.9rem;
+    width: 95%;
+}
+
+.e1 {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(187, 208, 255, 0.3);
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+}
+
+.e1 span {
+  font-size: 24px;
+  transform: rotate(-25deg);
+}
+
+.e2 {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  width: 65px;
+  height: 65px;
+  background-color: rgba(255, 200, 221, 0.3);
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+}
+
+.e2 span {
+  font-size: 32px;
+  transform: rotate(40deg);
+}
+
+.e3 {
+  position: absolute;
+  bottom: 200px;
+  left: 100px;
+  width: 65px;
+  height: 65px;
+  background-color: rgba(205, 180, 219, 0.3);
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+}
+
+.e3 span {
+  font-size: 32px;
+  transform: rotate(40deg);
+}
+
+.e4 {
+  position: absolute;
+  bottom: 100px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(148, 210, 189, 0.3);
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+}
+
+.e4 span {
+  font-size: 24px;
+  transform: rotate(25deg);
+}
+
+.e5 {
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 181, 167, 0.3);
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+}
+
+.e5 span {
+  font-size: 24px;
+
+  transform: rotate(-25deg);
+}
+
+.e6 {
+  position: absolute;
+  top: 200px;
+  right: 100px;
+  width: 65px;
+  height: 65px;
+  background-color: rgba(153, 88, 42, 0.3);
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+}
+
+.e6 span {
+  font-size: 32px;
+  transform: rotate(-40deg);
+}
+
+.e7 {
+  position: absolute;
+  bottom: 200px;
+  right: 100px;
+  width: 65px;
+  height: 65px;
+  background-color: rgba(255, 200, 221, 0.3);
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+}
+
+.e7 span {
+  font-size: 32px;
+  transform: rotate(-40deg);
+}
+
+.e8 {
+  position: absolute;
+  bottom: 100px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(4, 102, 200, 0.3);
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+}
+
+.e8 span {
+  font-size: 24px;
+  transform: rotate(-25deg);
+}
+
+/* Check */
+/* Landing */
+.check-container {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.check-container .content {
+  max-width: 968px;
+  margin: 0 auto;
+}
+
+.check-container .content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.check-container .content h2 .title {
+  color: #2ec4b6;
+}
+
+.check-container .content .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.check-container .content .input-group {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.check-container .content label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.check-container .content input {
+  width: 100%;
+
+  outline: 0;
+  font-size: 0.975rem;
+  padding: 0.4rem 1rem;
+
+}
+
+.check-container .content input[type="file"] {
+  padding: 0;
+
+}
+
+.check-container .content button {
+  width: 50%;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: #2ec4b6;
+  color: #fff;
+  padding: 0.5rem 0;
+}
+
+/* Contact */
+.contact-container {
+  width: 100%;
+}
+
+.contact-container .content {
+  max-width: 1180px;
+  margin: auto;
+  padding: 3rem 0;
+}
+
+.contact-container .content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+} 
+.contact-container .content h2 .title{
+  color: #2ec4b6;
+}
+
+.contact-container .content .grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-container .content .input-group {
+  margin-bottom: 1rem;
+}
+
+.contact-container .content .input-group label {
+  display: block;
+}
+
+.contact-container .content .input-group input ,
+.contact-container .content .input-group textarea {
+  width: 100%;
+  resize: none;
+  border: 1px solid #000;
+  outline: none;
+  padding: 0.4rem 1rem;
+  font-size: 0.975rem;
+}
+
+.contact-container .content button{
+  width: 50%;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background-color: #2ec4b6;
+  color: #fff;
+  padding: 0.6rem 0;
+}
+
+.contact-container .content button.disable {
+  pointer-events: none;
+}
+
+/* Result */
+.result-container {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.result-container .content {
+  max-width: 968px;
+  margin: 0 auto;
+}
+
+.result-container .content h2 {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+
+.result-container .content h2 span {
+  color: #2ec4b6;
+}
+
+.result-container .content .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.result-container .content .group {
+  margin-bottom: 1rem;
+}
+
+.result-container .content .group span {
+  display: block;
+}
+
+.result-container .content .group span:first-child {
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.result-container .content .group span:last-child {
+  font-size: 0.8rem;
+}
+
+.result-container .content  .button-group {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.result-container .content button {
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.result-container .content button.dbtn {
+  margin-right: 1rem;
+  background-color: #2ec4b6 !important;
+  color: #fff !important;
+}
+
+.result-container .content button:last-child  {
+  border: 1px solid #2ec4b6;
+  color: #2ec4b6;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 1180px) {
+  .landing-container .content  {
+    width: 80vw;
+  }
+
+  .emojis {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-toggler {
+        display: block;
+    }
+
+    header {
+        display: block;
+        padding: 0 1rem;
+    }
+
+    header .mobile-view {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav ul {
+        display: none;
+        transition: all 0.3s;
+    }
+
+    header nav ul li {
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul.active {
+        display: block;
+    }
+
+    header.active {
+        box-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+    }
+
+    header nav ul li:last-child{
+        padding-bottom: 1rem;
+        margin-bottom: 0;
+    }
+
+    .landing-container .content,
+    .contact-container .content,
+    .check-container .content,
+    .result-container .content {
+      width: 85vw;
+    }
+
+    .landing-container .content > .about .flex {
+      display: block;
+    }
+
+    .landing-container .content > .about .flex .card {
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+  .landing-container .content  {
+    width: 90vw;
+  }
+}
+
+/*
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,7 +587,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Upload.js */
 .container, .result-container {
   display: flex;
   justify-content: center;
@@ -112,7 +684,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* Result.js */
 .result {
   max-width: 90vw;
   background-color: #fff;
@@ -219,4 +790,4 @@ body {
 
 @media screen  and (max-width: 500px) {
   
-}
+} */
