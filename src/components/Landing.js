@@ -10,7 +10,7 @@ const Landing = () => {
             <div className="content">
                 <section className="header">
                     <h2>Emotion Recognition</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi illum iste architecto ipsum officia sed laborum similique error laudantium, id rerum numquam pariatur suscipit earum esse, molestias libero, fugit eum?</p>
+                    <p>Emotion recognition has the potential to revolutionize many aspects of human interaction and communication, from helping people with autism better understand social cues to enabling more empathetic and responsive artificial intelligence.</p>
                 </section>
 
                 <section className="about">
@@ -23,7 +23,7 @@ const Landing = () => {
                             </div>
 
                             <h4>Model Used</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo rerum aut earum beatae, sequi quod numquam nobis iure facilis ipsam. Amet, provident ratione. Aliquam obcaecati ducimus natus incidunt quos vero.</p>
+                            <p>CNN Model is used in recognizing the emotion. The trained model has three convolution layers followed by pooling layer. The output is passed to flattening layer then to dense layer which produces the result.</p>
                         </div>
                         <div className="card">
                             <div className="header">
@@ -31,7 +31,7 @@ const Landing = () => {
                             </div>
 
                             <h4>Comparison</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo rerum aut earum beatae, sequi quod numquam nobis iure facilis ipsam. Amet, provident ratione. Aliquam obcaecati ducimus natus incidunt quos vero.</p>
+                            <p>Many emotion recognition model using facial expression for recognizing the emotions. But we have used EEG and ECG signal in the form of numerical data which produces better result. </p>
                         </div>
                         <div className="card">
                             <div className="header">
@@ -39,7 +39,7 @@ const Landing = () => {
                             </div>
 
                             <h4>Usage</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo rerum aut earum beatae, sequi quod numquam nobis iure facilis ipsam. Amet, provident ratione. Aliquam obcaecati ducimus natus incidunt quos vero.</p>
+                            <p>Navigate to Check page. Enter your details along with your EEG and ECG signal in the form of csv file. Click the recognize button. The result will be displayed in the result page which can be downloaded in pdf format.</p>
                         </div>
                     </div>
                 </section>
